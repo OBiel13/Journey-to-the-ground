@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://cig5x27c161f1"]
+
+[ext_resource type="Script" uid="uid://cvwe2l7yern0o" path="res://scripts/menu_principal.gd" id="1_w5ui5"]
+[ext_resource type="Texture2D" uid="uid://da1iewkfnfd23" path="res://sprites/Background/background2.png" id="2_w5ui5"]
+[ext_resource type="FontFile" uid="uid://gj2f5yip3ckq" path="res://fonts/Pixel Lofi/Pixel Lofi.otf" id="3_nxt0m"]
+[ext_resource type="Texture2D" uid="uid://yj3fr5f3kkc1" path="res://sprites/Menu/Buttons/Play.png" id="4_2xgxd"]
+[ext_resource type="Texture2D" uid="uid://brwq40gn04k3" path="res://sprites/Menu/Buttons/Close.png" id="5_8k4fm"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_lgh5n"]
+font = ExtResource("3_nxt0m")
+font_size = 42
+font_color = Color(0, 0, 0, 1)
+outline_size = 3
+outline_color = Color(0, 1, 0, 1)
+
+[node name="MenuPrincipal" type="Control" unique_id=206605616]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_w5ui5")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=389312546]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_w5ui5")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1655887044]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=86880982]
+layout_mode = 2
+text = "Journey to the ground"
+label_settings = SubResource("LabelSettings_lgh5n")
+
+[node name="BotaoSolo" type="Button" parent="VBoxContainer" unique_id=2069099887]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Jogar Solo"
+icon = ExtResource("4_2xgxd")
+expand_icon = true
+
+[node name="BotaoCoop" type="Button" parent="VBoxContainer" unique_id=1105495977]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7174272, 0.4561472, 0, 1)
+theme_override_colors/icon_normal_color = Color(1, 0.6431373, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Jogar em Dupla"
+icon = ExtResource("4_2xgxd")
+expand_icon = true
+
+[node name="BotaoSair" type="Button" parent="VBoxContainer" unique_id=162385489]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.67240953, 0.064043105, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 1, 1, 1)
+theme_override_font_sizes/font_size = 32
+text = "Sair"
+icon = ExtResource("5_8k4fm")
+expand_icon = true

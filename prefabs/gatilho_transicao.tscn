@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://cg0n3slgcpvn3"]
+
+[ext_resource type="Script" uid="uid://bt2bv3cpuxven" path="res://scripts/gatilho_transicao.gd" id="1_cxanw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ekh2l"]
+size = Vector2(57, 78.5)
+
+[node name="GatilhoTransicao" type="Area2D" unique_id=435570850]
+script = ExtResource("1_cxanw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1097886025]
+shape = SubResource("RectangleShape2D_ekh2l")

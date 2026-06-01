@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://bomr188l7f7yt"]
+
+[ext_resource type="Script" uid="uid://b4xiqvxnkw0hd" path="res://scripts/serra.gd" id="1_00vh3"]
+[ext_resource type="Texture2D" uid="uid://pbpmupujlql5" path="res://sprites/Traps/Saw/On (38x38).png" id="1_kky0i"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_00vh3"]
+atlas = ExtResource("1_kky0i")
+region = Rect2(0, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s1f20"]
+atlas = ExtResource("1_kky0i")
+region = Rect2(38, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_81vk0"]
+atlas = ExtResource("1_kky0i")
+region = Rect2(76, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ckck"]
+atlas = ExtResource("1_kky0i")
+region = Rect2(114, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f2b5o"]
+atlas = ExtResource("1_kky0i")
+region = Rect2(152, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o0dlv"]
+atlas = ExtResource("1_kky0i")
+region = Rect2(190, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gw4gt"]
+atlas = ExtResource("1_kky0i")
+region = Rect2(228, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_an42u"]
+atlas = ExtResource("1_kky0i")
+region = Rect2(266, 0, 38, 38)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hdx3y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_00vh3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s1f20")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_81vk0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ckck")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f2b5o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o0dlv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gw4gt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_an42u")
+}],
+"loop": true,
+"name": &"default",
+"speed": 24.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hu4ll"]
+radius = 19.0
+
+[node name="Serra" type="Area2D" unique_id=61576850]
+script = ExtResource("1_00vh3")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1160796376]
+sprite_frames = SubResource("SpriteFrames_hdx3y")
+autoplay = "default"
+frame_progress = 0.6912128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=924175237]
+shape = SubResource("CircleShape2D_hu4ll")

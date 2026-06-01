@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://v8hx5axw7471"]
+
+[ext_resource type="PackedScene" uid="uid://cekphqtt2xri3" path="res://prefabs/player.tscn" id="1_014kd"]
+[ext_resource type="Script" uid="uid://d0bwndtb7nk77" path="res://scripts/level_1.gd" id="1_pa8r4"]
+[ext_resource type="Script" uid="uid://knlk68ssp633" path="res://scripts/camera_2d.gd" id="10_2y5yt"]
+
+[node name="Level 1(testes)" type="Node2D" unique_id=617347542]
+script = ExtResource("1_pa8r4")
+
+[node name="Player1" parent="." unique_id=1989119794 instance=ExtResource("1_014kd")]
+position = Vector2(252, 30)
+
+[node name="Player2" parent="." unique_id=1684969315 instance=ExtResource("1_014kd")]
+position = Vector2(329, 38)
+usa_teclado = false
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1677988523]
+position = Vector2(576, 326)
+position_smoothing_enabled = true
+script = ExtResource("10_2y5yt")
+max_zoom = 0.5

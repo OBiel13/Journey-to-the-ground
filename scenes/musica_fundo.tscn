@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bhpkf53dfkvvi"]
+
+[ext_resource type="AudioStream" uid="uid://bpfaoo4bemmvg" path="res://sounds/[Official] Celeste Original Soundtrack - 08 - Scattered and Lost.mp3" id="1_y4sox"]
+
+[node name="MusicaFundo" type="AudioStreamPlayer" unique_id=838661540]
+stream = ExtResource("1_y4sox")
+volume_db = -10.0
+autoplay = true

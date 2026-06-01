@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://cqla8tiees4be"]
+
+[ext_resource type="Script" uid="uid://4axxwrso2s8y" path="res://scripts/menu_final.gd" id="1_ftykr"]
+[ext_resource type="Texture2D" uid="uid://cllpn6uel5rw7" path="res://sprites/Background/solid.jpg" id="1_wy0kx"]
+[ext_resource type="FontFile" uid="uid://gj2f5yip3ckq" path="res://fonts/Pixel Lofi/Pixel Lofi.otf" id="2_mjjpl"]
+[ext_resource type="Texture2D" uid="uid://c2weiuxric3re" path="res://sprites/Menu/Buttons/Restart.png" id="4_yr1dd"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ftykr"]
+font = ExtResource("2_mjjpl")
+font_size = 42
+font_color = Color(0.88677335, 0.95873326, 1.540184e-06, 1)
+
+[node name="MenuFinal" type="Control" unique_id=1220435706]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ftykr")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=33237366]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_wy0kx")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1779729715]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=1403030011]
+layout_mode = 2
+text = "DEMO FINALIZADA!
+Obrigado por jogar!"
+label_settings = SubResource("LabelSettings_ftykr")
+
+[node name="BotaoVoltarMenu" type="Button" parent="VBoxContainer" unique_id=147131411]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.2831628, 0.63795656, 0.63204336, 1)
+theme_override_colors/icon_normal_color = Color(0.64015406, 0.50976944, 0.7056611, 1)
+theme_override_font_sizes/font_size = 26
+text = "Voltar"
+icon = ExtResource("4_yr1dd")
+expand_icon = true
